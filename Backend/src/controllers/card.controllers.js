@@ -1,6 +1,18 @@
 import { Card } from "../models/cards.model.js";
+import { v2 as cloudinary } from "cloudinary"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
+import dotenv from "dotenv";
 
+dotenv.config({
+    path: './.env'
+})
+
+cloudinary.config({ 
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+    api_key: process.env.CLOUDINARY_API_KEY, 
+    api_secret: process.env.CLOUDINARY_API_SECRET
+
+});
 
 // Authenticated user can create a new card
 
@@ -81,12 +93,15 @@ const createCard = async (req, res) => {
 const deleteCard = async (req, res) => {
     try {
         const { id } = req.params;
+        
         if (!id) {
             return res.status(400).json({
                 status: "failed",
                 message: "Please provide card id"
             })
         }
+        const card1 = await Card.findById(id);
+        const cardimg = card1.image;
         const card = await Card.findByIdAndDelete(id);
         if (!card) {
             return res.status(404).json({
@@ -94,6 +109,14 @@ const deleteCard = async (req, res) => {
                 message: "Card not found"
             })
         }
+        const UrlArray = cardimg.split('/');
+        const lastLocation =  UrlArray[UrlArray.length - 1];
+        const public_id = lastLocation.split('.')[0];
+        console.log(public_id)
+        cloudinary.uploader.destroy(public_id, (error, result) => {
+            console.log(error, result);
+        })
+
         return res.status(200).json({
             status: "success",
             message: "Card is deleted successfully"
