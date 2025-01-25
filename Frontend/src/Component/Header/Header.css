@@ -1,0 +1,216 @@
+.navbarItems{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.2rem;
+	padding: 0 30px;
+	background: #fcf23624;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+	width: 95%;
+	height: 80px;
+	border-radius: 13px;
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 10000;
+}
+
+.img-item{
+	color: #603f29;
+	justify-content: start;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.img-item img{
+	background-color: #603f2936;
+	border-radius: 10px;
+	margin-right: 20px;
+	height: 60px;
+}
+
+.nav-menu{
+	display: grid;
+	grid-template-columns: repeat(6,auto);
+	grid-gap: 10px;
+	list-style: none;
+	align-items: center;
+	text-align: center;
+	justify-content: end;
+	transition: left 0.3s ease;
+}
+
+.nav-links{
+	text-decoration: none;
+	color: #603f29;
+	padding: .7rem 1rem;
+	/* gap: 20px; */
+	white-space: nowrap;
+}
+
+.nav-links i{
+	padding-right: 10px;
+}
+
+.nav-links:hover{
+	/* background-color: #9bec4a8a; */
+	background: rgb(247,240,76);
+	background: linear-gradient(281deg, rgba(247,240,76,1) 25%, rgba(250,235,226,1) 100%);
+	border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-links:c{
+	background-color: #9bec4a8a;
+
+}
+
+.fa-bars,
+.fa-times{
+	color: #603f29;
+}
+
+.menu-icon{
+	display: none;
+}
+
+.mode-button{
+	padding: 0.5rem 1rem;
+	white-space: nowrap;
+	background-color: #ffffff0c;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 1rem;
+	color: #603f29;
+}
+
+@media screen and (max-width:850px) {
+	.navbarItems{
+		z-index: 99;
+	}
+	.nav-menu {
+		position: absolute;
+		top: 0;
+		left: -110%;
+		opacity: 0;
+		visibility: hidden;
+		align-items: stretch;
+		margin: 0;
+		z-index: 1;
+		transform: translateX(100%);
+	}
+	
+	.nav-menu-active {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		position: absolute;
+		height: 100vh;
+		background: rgb(247,240,76);
+		background: linear-gradient(281deg, rgba(247,240,76,1) 25%, rgba(250,235,226,1) 100%);
+		backdrop-filter: blur(10px);
+		border-radius: 20px;
+		padding: 80px 10px 30px 10px;
+		list-style: none;
+		width: 100%;
+		max-width: 350px;
+		top: 0%;
+		right: 0%;
+		z-index: -1;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		/* transition: all 0.5s ease-in-out;
+
+		animation: fadeInSlide 0.7s ease forwards; */
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+	}
+	
+
+	.nav-links{
+		display: block;
+		widows: 100%;
+		padding: 1.5rem 0;
+		color: #603f29;
+		text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: background 0.3s ease, transform 0.2s ease;
+	}
+
+	.nav-links:hover{
+		background: rgba(0,0,0,0.25);
+		backdrop-filter: blur(10px);
+		transform: scale(1.05);
+	}
+
+	.menu-icon{
+		display: block;
+		font-size: 2rem;
+        cursor: pointer;
+        transition: transform .5s ease;
+	}
+	.menu-icon.rotate {
+        transform: rotate(90deg);
+		transition: transform .5s ease;
+    }
+
+	.mode-button{
+		padding: 1.5rem;
+		display: block;
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: bold;
+		width: 80%;
+		background: #f7fc6881;
+        border: none;
+        border-radius: 8px;
+		margin: auto;
+		transition: background 0.3s ease, transform 0.2s ease;
+
+	}
+
+	.mode-button:hover {
+        background: #ef792f98;
+        transform: translateY(-5px);
+    }
+
+	@keyframes fadeInSlide {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+	@keyframes fadeOutSlide {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+@media screen and (max-width:850px){
+	.headingName{
+		font-size: 1rem;
+	}
+	.img-item img{
+		margin-right: 10px;
+	}
+	
+}

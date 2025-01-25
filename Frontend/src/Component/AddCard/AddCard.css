@@ -1,0 +1,76 @@
+.add-card {
+    background-color: #EDEBC2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 20px;
+    display: flex;
+    width: 85vw;
+    max-width: 600px;
+    height: auto;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.add-card-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.add-input {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.add-card input {
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.add-card input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.addCardSubmit {
+    padding: 12px 40px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #3C91E6;
+    color: white;
+}
+
+.addCardSubmit:hover {
+    background-color: #DB504A;
+    transform: scale(1.05);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .add-card {
+        width: 95vw;
+        padding: 20px;
+    }
+
+    .add-card input {
+        width: 90%;
+    }
+
+    .addCardSubmit {
+        width: 100%;
+        max-width: 300px;
+    }
+}

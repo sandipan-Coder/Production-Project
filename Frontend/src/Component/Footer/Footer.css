@@ -1,0 +1,139 @@
+:root {
+    --footer-background: #f7ed38f2;
+    --text: #5e4a3a;
+    --secondary-text: #333;
+    --link-hover: #e03838;
+}
+
+
+h2{
+    color:var(--text);
+}
+.footer {
+    z-index: 1;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    background: var(--footer-background);
+    color: var(--text);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    width: 80%;
+    background: var(--footer-background);
+    filter: url("#blob");
+    z-index: 0;
+}
+
+.footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation:
+        bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+        bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+.footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer .content .logo-section {
+    text-align: left;
+}
+
+.footer .content .logo-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer .content .logo-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer .content .Services,
+.footer .content .contact-info {
+    text-align: left;
+}
+
+.footer .content .Services ul,
+.footer .content .contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .content .Services ul li,
+.footer .content .contact-info ul li {
+    margin: 0.5rem 0;
+}
+
+.footer .content .Services ul li a,
+.footer .content .contact-info ul li a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.footer .content .Services ul li a:hover,
+.footer .content .contact-info ul li a:hover {
+    color: var(--link-hover);
+}
+
+.footer .content .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .content .social-icons a {
+    font-size: 1.2rem;
+    color: var(--text);
+    transition: color 0.3s;
+}
+
+.footer .content .social-icons a:hover {
+    color: var(--link-hover);
+}
+
+
+.bottom-bar {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
