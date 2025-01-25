@@ -1,0 +1,89 @@
+
+.about-page {
+    width: 95%;
+    background: #EAE8BD;
+    color: #603F29;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.about-banner {
+    text-align: center;
+    background: #603F29;
+    color: #EAE8BD;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-banner p {
+    font-size: 1.2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content section {
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #1c1c1b;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #191817;
+    display: inline-block;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-values ul,
+.offerings-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-values ul li,
+.offerings-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff8e7;
+    border-radius: 5px;
+    border: 1px solid #d4af37;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-values ul li strong {
+    color: #b7842e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-banner h1 {
+        font-size: 2rem;
+    }
+
+    .about-banner p {
+        font-size: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+}

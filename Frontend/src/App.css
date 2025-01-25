@@ -1,6 +1,90 @@
-*{
-  background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-h1{
-  color: white;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e7e7d3d7;
+}
+
+.hide{
+    width: 100%;
+    height: 100px;
+    background: #e7e7d3;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+
+.main-card{
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        /* margin: 120px 0; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+        z-index: 1;
+}
+
+.add-con{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+
+.footer-con {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.About-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.auth-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 120px; */
+}
+
+.add-card-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
