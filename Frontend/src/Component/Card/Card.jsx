@@ -1,9 +1,12 @@
 import { useState } from "react";
 import "./Card.css";
 
-const Card = ({book}) => {
+const Card = ({book, onDelete}) => {
   const [flipped, setFlipped] = useState(false);
-  console.log(book)
+
+  const handleDelete = ({_id}) => {
+    onDelete(book._id);
+  }
 
   const handleFlip = () => {
     setFlipped(!flipped);
@@ -26,7 +29,10 @@ const Card = ({book}) => {
         </div>
         {/* back */}
         <div className="card-back">
-          <button className="delete-button" role="button">
+          <button 
+          onClick={ handleDelete }
+          className="delete-button" 
+          role="button">
             Delete
           </button>
         </div>

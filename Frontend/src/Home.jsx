@@ -6,6 +6,7 @@ import Header from "./Component/Header/Header";
 import Card from "./Component/Card/Card";
 import Footer from "./Component/Footer/Footer";
 import AddCardButton from "./Component/AddCardButton/AddcardButton";
+import { enqueueSnackbar } from "notistack";
 
 export default function Home() {
     const [books, setBooks] = useState([]);
@@ -21,6 +22,20 @@ export default function Home() {
             });
     }, []);
 
+    const handleDelete = (id) => {
+        axios
+        .delete(`http://localhost:8000/cards/${id}`)
+        .then(() => {
+    
+            setBooks((prevBooks) => prevBooks.filter((book) => book._id !== id));
+            enqueueSnackbar("Card deleted successfully!", { variant: "success" });
+        })
+        .catch((error) => {
+            enqueueSnackbar("Error", { variant: "error" });
+            console.log("Error deleting card:", error);
+        });
+    };
+
     console.log(books);
     return (
         <>
@@ -30,7 +45,7 @@ export default function Home() {
                 <div className="card-div-container">
                 <div className="main-card">
                     {books.map((items) => (
-                        <Card key={items._id} book={items} />
+                        <Card key={items._id} book={items} onDelete={handleDelete}/>
                     ))}
                 </div>
                 </div>
@@ -46,21 +61,3 @@ export default function Home() {
         </>
     );
 }
-
-// const [books, setBooks] = useState([]);
-// const [loading, setLoading] = useState(false);
-// const [showType, setShowType] = useState('table');
-
-//   useEffect(() => {
-//     setLoading(true);
-//     axios
-//       .get("http://localhost:5555/books")
-//       .then((res) => {
-//         setBooks(res.data.data);
-//         setLoading(false);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//         setLoading(false);
-//       });
-//   }, []);

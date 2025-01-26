@@ -15,6 +15,6 @@ router.route("/create").post(
     ]),
     createCard
 );
-router.route("/:id").put(deleteCard);
+router.route("/:id").delete(deleteCard);
 
 export default router;

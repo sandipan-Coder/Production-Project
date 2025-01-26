@@ -85,7 +85,7 @@ function AddCard() {
             <input 
             value={pricing}
             onChange={(e) => setPricing(e.target.value)}
-            type="text" 
+            type="number" 
             required 
             aria-label="Price" 
              placeholder='Price'/>
