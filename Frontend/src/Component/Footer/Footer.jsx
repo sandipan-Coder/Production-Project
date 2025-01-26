@@ -3,7 +3,7 @@ import './Footer.css';
 import logo from './logo.png';
 
 const Footer = () => {
-  const bubbles = Array.from({ length: 50 }).map((_, i) => {
+  const bubbles = Array.from({ length: 25 }).map((_, i) => {
     const size = 2 + Math.random() * 4;
     const distance = 6 + Math.random() * 4;
     const position = -5 + Math.random() * 110;

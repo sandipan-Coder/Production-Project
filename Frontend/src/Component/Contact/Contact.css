@@ -1,3 +1,15 @@
+
+/* .hader-container{
+    margin-bottom: 40px;
+} */
+
+.xyz{
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contact-page {
     padding: 20px;
     text-align: center;
@@ -6,6 +18,7 @@
     min-height: 70vh;
     width: 80vw;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .contact-page h1 {
@@ -56,6 +69,11 @@
 .contact-text {
     font-size: 1rem;
     font-weight: bold;
+}
+
+.footer-container{
+    margin-top: 90px;
+    width: 100%;
 }
 
 

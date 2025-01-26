@@ -18,8 +18,9 @@
 
 .button .button__text {
     transform: translateX(30px);
-    color:#603f29;;
+    color:#603f29;
     font-weight: 600;
+    text-align: none;
 }
 
 .button .button__icon {
@@ -34,10 +35,6 @@
     border-radius: 20px;
 }
 
-.button .svg {
-    width: 30px;
-    stroke: #fff;
-}
 
 .button:hover {
     background: #f7ed38f2;

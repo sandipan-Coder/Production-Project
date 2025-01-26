@@ -1,39 +1,32 @@
-import { useEffect, useState } from "react";
-import Auth from "../Authatication/Auth";
+import { useState } from "react";
 import "./Card.css";
 
-const Card = () => {
+const Card = ({book}) => {
   const [flipped, setFlipped] = useState(false);
+  console.log(book)
 
   const handleFlip = () => {
     setFlipped(!flipped);
   };
 
-  const handleDelete = () => {
-    useEffect( () => {
-      <Auth/>
-    },[])
-    
-    // alert("Card deleted!");
-  };
-
   return (
-    <div className="card-container" onDoubleClick={handleFlip}>
+    <div key={book._id} className="card-container" onDoubleClick={handleFlip}>
+      
       <div className={`card ${flipped ? "flip" : ""}`}>
         {/* Front*/}
         <div className="card-front">
           <div className="img-con">
-            <img src="https://th.bing.com/th/id/OIP.DcZp5jrqBag_QVl9zwd--AAAAA?rs=1&pid=ImgDetMain"className="card-image" />
+            <img src={`${book.image}`}className="card-image" />
           </div>
           <div className="card-details">
-            <h3 className="card-title">Elegant Gold Ring</h3>
-            <p className="card-description">A stunning 18k gold ring with intricate floral patterns.</p>
-            <p className="card-price">₹12,000</p>
+            <h3 className="card-title">{book.name}</h3>
+            <p className="card-description">{book.description}</p>
+            <p className="card-price">₹{book.pricing}</p>
           </div>
         </div>
         {/* back */}
         <div className="card-back">
-          <button className="delete-button" role="button" onClick={handleDelete}>
+          <button className="delete-button" role="button">
             Delete
           </button>
         </div>

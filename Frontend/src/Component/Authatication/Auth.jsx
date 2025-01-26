@@ -1,4 +1,5 @@
-// import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Auth.css";
 
 function Auth() {
@@ -18,7 +19,11 @@ function Auth() {
           </div>
           <button type="submit" className="btn">Login</button>
           <div className="Go-back">
-            <button className="back"><i className="fa-solid fa-arrow-left"></i></button>
+            <button className="back" >
+              <Link to={`/`}>
+                <i className="fa-solid fa-arrow-left"/>
+              </Link>
+            </button>
           </div>
         </form>
       </div>
