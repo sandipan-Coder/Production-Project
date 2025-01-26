@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 100vw;
     background: #e7e7d3d7;
 }
 
@@ -51,35 +50,13 @@ body {
 }
 
 
-.footer-con {
-    font-family: 'Open Sans', sans-serif;
+.footer-container {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
 }
 
-.contact-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.About-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-
-}
-
-.auth-con{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 120px; */
-}
 
 .add-card-container{
     width: 100%;

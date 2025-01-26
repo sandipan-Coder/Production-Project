@@ -9,6 +9,12 @@
 h2{
     color:var(--text);
 }
+
+i{
+    font-size: 1.5rem;
+}
+
+
 .footer {
     z-index: 1;
     display: grid;
@@ -18,6 +24,7 @@ h2{
     color: var(--text);
     padding: 2rem;
     text-align: center;
+    width: 100vw;
 }
 
 .footer .bubbles {
@@ -41,6 +48,10 @@ h2{
         bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
         bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
     transform: translate(-50%, 100%);
+}
+
+.img-item{
+    margin-bottom: 20px;
 }
 
 .footer .content {
@@ -79,6 +90,16 @@ h2{
 .footer .content .Services ul li,
 .footer .content .contact-info ul li {
     margin: 0.5rem 0;
+}
+
+.Services h2,.contact-info h2{
+    color: #e03838;
+}
+
+.Services,.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer .content .Services ul li a,
