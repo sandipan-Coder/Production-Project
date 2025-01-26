@@ -18,16 +18,19 @@
 
 .img-item{
 	color: #603f29;
-	justify-content: start;
-	cursor: pointer;
 	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	margin-top: 20px; 
 	align-items: center;
 }
 
 .img-item img{
+	
 	background-color: #603f2936;
 	border-radius: 10px;
 	margin-right: 20px;
+
 	height: 60px;
 }
 

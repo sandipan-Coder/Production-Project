@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./App.css";
+import "./Home.css";
 import Header from "./Component/Header/Header";
 import Card from "./Component/Card/Card";
 import Footer from "./Component/Footer/Footer";
@@ -39,15 +39,23 @@ export default function Home() {
     console.log(books);
     return (
         <>
-            <div className="App">
+            <div className="Home">
                 <Header />
                 <div className="hide"></div>
                 <div className="card-div-container">
+<<<<<<< HEAD
                 <div className="main-card">
                     {books.map((items) => (
                         <Card key={items._id} book={items} onDelete={handleDelete}/>
                     ))}
                 </div>
+=======
+                    <div className="main-card">
+                        {books.map((items) => (
+                            <Card key={items._id} book={items} />
+                        ))}
+                    </div>
+>>>>>>> c5c5ac73d8979f6c929bb0e7980587683fb407c6
                 </div>
                 <div className="add-con">
                     <Link to={`/cards/create`}>
