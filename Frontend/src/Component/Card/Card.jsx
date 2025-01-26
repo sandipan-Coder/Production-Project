@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Card.css";
 
-const Card = ({book, onDelete}) => {
+const Card = ({cards, onDelete}) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleDelete = ({_id}) => {
-    onDelete(book._id);
+    onDelete(cards._id);
   }
 
   const handleFlip = () => {
@@ -13,18 +13,18 @@ const Card = ({book, onDelete}) => {
   };
 
   return (
-    <div key={book._id} className="card-container" onDoubleClick={handleFlip}>
+    <div key={cards._id} className="card-container" onDoubleClick={handleFlip}>
       
       <div className={`card ${flipped ? "flip" : ""}`}>
         {/* Front*/}
         <div className="card-front">
           <div className="img-con">
-            <img src={`${book.image}`}className="card-image" />
+            <img src={`${cards.image}`}className="card-image" />
           </div>
           <div className="card-details">
-            <h3 className="card-title">{book.name}</h3>
-            <p className="card-description">{book.description}</p>
-            <p className="card-price">₹{book.pricing}</p>
+            <h3 className="card-title">{cards.name}</h3>
+            <p className="card-description">{cards.description}</p>
+            <p className="card-price">₹{cards.pricing}</p>
           </div>
         </div>
         {/* back */}

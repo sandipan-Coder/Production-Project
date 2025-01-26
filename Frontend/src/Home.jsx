@@ -7,15 +7,16 @@ import Card from "./Component/Card/Card";
 import Footer from "./Component/Footer/Footer";
 import AddCardButton from "./Component/AddCardButton/AddcardButton";
 import { enqueueSnackbar } from "notistack";
+import Auth from "./Component/Authatication/Auth";
 
 export default function Home() {
-    const [books, setBooks] = useState([]);
+    const [cards, setCards] = useState([]);
 
     useEffect(() => {
         axios
             .get("http://localhost:8000/cards/")
             .then((res) => {
-                setBooks(res.data.data);
+                setCards(res.data.data);
             })
             .catch((error) => {
                 console.log(error);
@@ -23,42 +24,35 @@ export default function Home() {
     }, []);
 
     const handleDelete = (id) => {
+        
         axios
         .delete(`http://localhost:8000/cards/${id}`)
         .then(() => {
     
-            setBooks((prevBooks) => prevBooks.filter((book) => book._id !== id));
+            setCards((prevBooks) => prevBooks.filter((cards) => cards._id !== id));
             enqueueSnackbar("Card deleted successfully!", { variant: "success" });
         })
         .catch((error) => {
             enqueueSnackbar("Error", { variant: "error" });
             console.log("Error deleting card:", error);
-        });
+        });      
+       
     };
 
-    console.log(books);
     return (
         <>
             <div className="Home">
                 <Header />
                 <div className="hide"></div>
                 <div className="card-div-container">
-<<<<<<< HEAD
                 <div className="main-card">
-                    {books.map((items) => (
-                        <Card key={items._id} book={items} onDelete={handleDelete}/>
+                    {cards.map((items) => (
+                        <Card key={items._id} cards={items} onDelete={handleDelete}/>
                     ))}
                 </div>
-=======
-                    <div className="main-card">
-                        {books.map((items) => (
-                            <Card key={items._id} book={items} />
-                        ))}
-                    </div>
->>>>>>> c5c5ac73d8979f6c929bb0e7980587683fb407c6
                 </div>
                 <div className="add-con">
-                    <Link to={`/cards/create`}>
+                    <Link to={`/cards/auth`}>
                         <AddCardButton />
                     </Link>
                 </div>

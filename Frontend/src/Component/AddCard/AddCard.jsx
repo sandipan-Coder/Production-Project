@@ -27,14 +27,12 @@ function AddCard() {
     formData.append('pricing', pricing);
     formData.append('image', image); 
 
-    console.log(formData);
-
     axios
     .post('http://localhost:8000/cards/create', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then(() => {
-      enqueueSnackbar('Book Created successfully', { variant: 'success' });
+      enqueueSnackbar('Card Created successfully', { variant: 'success' });
       navigate('/');
     })
     .catch((error) => {

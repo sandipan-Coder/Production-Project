@@ -14,29 +14,30 @@ cloudinary.config({
 
 });
 
-// Authenticated user can create a new card
-
+// Authenticated user can create a new card and delete a card
 const authentication = async(req, res, ) => {
 
-    const {Email, Password} = req.body;
+    console.log(req.body);
 
-    if((!Email) || (!Password)){
+    const {email, password} = req.body;
+
+    if((!email) || (!password)){
         return res.status(400).json({
             status: "failed",
             message: "Please provide email and password"
         })
     }
 
-    if((Email != "chandan@gmail.com") || (Password != 12345)){
-        return res.status(400).json({
-            status: "failed",
-            message: "Invalid email or password"
+    if((email == "chandan@gmail.com") || (password == 12345)){
+        return res.status(200).json({
+            status: "success",
+            message: "User is authenticated"
         })
     }
 
-    return res.status(200).json({
-        status: "success",
-        message: "User is authenticated"
+    return res.status(400).json({
+        status: "failed",
+        message: "Invalid email or password"
     })
 }
 
