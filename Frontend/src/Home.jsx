@@ -5,9 +5,9 @@ import "./Home.css";
 import Header from "./Component/Header/Header";
 import Card from "./Component/Card/Card";
 import Footer from "./Component/Footer/Footer";
-import AddCardButton from "./Component/AddCardButton/AddcardButton";
+import AddCardButton from "./Component/AddCardButton/AddCardButton";
 import { enqueueSnackbar } from "notistack";
-import Auth from "./Component/Authatication/Auth";
+
 
 export default function Home() {
     const [cards, setCards] = useState([]);
