@@ -9,7 +9,7 @@ const Contact = () => {
       icon: "fa-solid fa-phone",
       name: "Phone",
       link: "tel:+91",
-      displayText: "+91 xnxx.com",
+      displayText: "+91xxxxxx",
     },
     {
       icon: "fa-brands fa-whatsapp",
@@ -48,27 +48,24 @@ const Contact = () => {
             <h1>Contact Us</h1>
             <p>Feel free to connect with me through the platforms below:</p>
             <div className="contact-links">
-                {contactLinks.map((contact, index) => (
-                <a
-                    key={index}
-                    href={contact.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-link"
-                >
-                    <span className={contact.icon}></span>
-                    <span className="contact-text">{contact.displayText}</span>
-                </a>
-                ))}
+              {contactLinks.map((contact, index) => (
+              <a
+                key={index}
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link"
+              >
+                <span className={contact.icon}></span>
+                <span className="contact-text">{contact.displayText}</span>
+              </a>
+            ))}
             </div>
-            {/* <div className="logo-part">
-
-                </div> */}
-            </div>
+          </div>
         </div>
 
         <div className="footer-container">
-            <Footer />
+          <Footer />
         </div>
     </>
   );

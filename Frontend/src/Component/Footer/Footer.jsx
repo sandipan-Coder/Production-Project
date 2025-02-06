@@ -34,7 +34,8 @@ const Footer = () => {
             <img src={logo} alt="Logo" />
             <h1 className="headingName">AMBHIKA JEWELLERS</h1>
         </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea quo ex ullam laboriosam magni totam, facere eos iure voluptate.</p>
+          <p>Ambika Jewellers - Celebrating the art of fine craftsmanship since 2015. Discover timeless elegance and unmatched quality with every piece.<br/>
+          'Jewelry is not just an accessory, it's a reflection of your unique story.'</p>
           <div className="social-icons">
             <a href="#"><i className="fa-brands fa-facebook"></i></a>
             <a href="#"><i className="fa-brands fa-square-x-twitter"></i></a>
@@ -45,23 +46,26 @@ const Footer = () => {
         <div className="Services">
           <h2>Services</h2>
           <ul>
-            <li>buy gold</li>
-            <li>#</li>
-            <li>#</li>
-            <li>#</li>
+            <li>Buy and Seal Gold</li>
+            <li>Buy and Seal Silver</li>
+            <li>Manufacturing Stylis Ornaments</li>
+            <li>Repapring Gold Ornaments</li>
           </ul>
         </div>
         <div className="contact-info">
           <h2>Contact Info</h2>
           <ul>
             <li><a href="tel:+91xx">+91 xxxx</a></li>
-            <li><a href="mailto:xyz@gmail.com">xyz@gmail.com</a></li>
-            <li>Address</li>
+            <li><a href="mailto:sandipanpal254@gmail.com">xyz@gmail.com</a></li>
+            <li>Jahalda @ Belda @ Paschim Medinipur</li>
           </ul>
         </div>
       </div>
       <div className="bottom-bar">
-      © 2025 AMBHIKA JEWELLERS
+        <p>© 2025 AMBHIKA JEWELLERS</p>
+        <p>[🎨 UI Designer: Mostakin] 
+        [💻 Backend & Routing: Sandipan]</p>
+      
       </div>
     </footer>
   );

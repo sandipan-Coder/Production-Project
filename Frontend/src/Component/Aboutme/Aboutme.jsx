@@ -21,31 +21,13 @@ const AboutMe = () => {
           <section className="about-story">
             <h2>Our Story</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
-              recusandae molestias qui illo perspiciatis accusantium sequi,
-              autem assumenda doloribus dolorum sint maiores commodi velit a
-              ducimus quis quod, alias nulla in harum. Nulla doloribus
-              voluptatem consequuntur, rerum ducimus aliquid! Sit perspiciatis
-              neque officia ex reprehenderit rem minima asperiores quaerat ullam
-              dolorem quisquam optio voluptas accusantium earum, aspernatur
-              officiis, dicta recusandae! Quos distinctio deserunt itaque aut.
-              Consequatur laborum amet doloribus animi molestias nulla iure quos
-              laudantium quidem placeat officiis ex vel voluptatem mollitia
-              nihil, quis voluptatum temporibus magni optio perspiciatis commodi
-              quaerat omnis. Eligendi iusto ab voluptate quasi! Vitae dolorum
-              eligendi, eaque, exercitationem quaerat molestiae dolor quasi
-              repudiandae repellat aliquam ab, cumque odit sequi porro.
-              Officiis, consequatur cumque! Molestiae animi tempora earum,
-              reiciendis tenetur necessitatibus recusandae hic repellat
-              distinctio, quod ullam. Facere, hic facilis! Id, reiciendis
-              cumque. Non, fugiat ipsum a error magni eius quisquam amet
-              laboriosam consectetur soluta iure quas? Ab autem quia cum hic
-              officiis optio voluptatem provident aliquam aliquid, quidem
-              expedita vel odit, ea commodi reprehenderit veniam laudantium
-              dolore maxime ratione voluptas! Cupiditate placeat libero
-              laudantium quidem, nostrum ut eos voluptate, animi rem sit soluta
-              consequatur tempore ab ipsam hic ad corrupti iure veritatis
-              doloribus autem fugit minima?
+            In the quaint town of Jahalda, Belda, Paschim Medinipur, there’s a name that has been synonymous with quality and trust since 2015—Ambika Jewellers. Owned by Chandan Pal, this family-run jewelry store has become a beloved destination for those seeking timeless beauty and impeccable craftsmanship.<br/>
+
+            What began as a humble endeavor has grown into a beacon of artistry and reliability. At Ambika Jewellers, gold and silver ornaments are not just created; they’re crafted with precision and care, reflecting the dreams and emotions of every customer. From exquisite new designs to the careful repair of cherished heirlooms, every piece tells a story of elegance and heritage.<br/>
+            <br/>
+            Stepping into the beautifully decorated air-conditioned showroom, customers are greeted with a warm ambiance and a promise of premium quality. It’s not just the shimmering ornaments that draw people in—it’s the unwavering commitment to trust and excellence that keeps them coming back.<br/>
+
+            For nearly a decade, Ambika Jewellers has stood as a testament to Chandan Pal’s vision: creating jewelry that lasts a lifetime and building relationships rooted in integrity.
             </p>
           </section>
           <section className="about-values">
