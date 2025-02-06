@@ -10,7 +10,7 @@ dotenv.config({
 
 connectDB()
 .then(() => {
-    app.listen("https://ambhika-jwellers.onrender.com/", () => {
+    app.listen("https://ambhika-jwellers.onrender.com", () => {
         console.log(`Server is running at port: ${process.env.PORT}`);
     })
 })
