@@ -14,7 +14,7 @@ export default function Home() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/cards/")
+            .get("https://ambhika-jwellers.onrender.com/cards/")
             .then((res) => {
                 setCards(res.data.data);
             })
@@ -26,7 +26,7 @@ export default function Home() {
     const handleDelete = (id) => {
         
         axios
-        .delete(`http://localhost:8000/cards/${id}`)
+        .delete(`https://ambhika-jwellers.onrender.com/cards/${id}`)
         .then(() => {
     
             setCards((prevBooks) => prevBooks.filter((cards) => cards._id !== id));

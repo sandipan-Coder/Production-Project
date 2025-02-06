@@ -23,7 +23,7 @@ function Auth() {
     const data = {email, password};
 
     axios
-    .post('http://localhost:8000/cards/auth', data)
+    .post('https://ambhika-jwellers.onrender.com/cards/auth', data)
     .then(() => {
       enqueueSnackbar('Authenticated successfully', { variant: 'success' });
       navigate('/cards/create');

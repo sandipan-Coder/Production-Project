@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: "https://ambhika-jwellers.onrender.com/",
     credentials: true,
   })
 );
