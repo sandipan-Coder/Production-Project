@@ -14,7 +14,7 @@ export default function Home() {
 
     useEffect(() => {
         axios
-            .get("https://ambhika-jwellers.onrender.com/cards/")
+            .get("https://ambhika-jwellers.onrender.com//cards/")
             .then((res) => {
                 setCards(res.data.data);
             })

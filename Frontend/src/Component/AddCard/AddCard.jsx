@@ -28,7 +28,7 @@ function AddCard() {
     formData.append('image', image); 
 
     axios
-    .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
+    .post('https://ambhika-jwellers.onrender.com//cards/create', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
     .then(() => {
