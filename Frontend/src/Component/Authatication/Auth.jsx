@@ -48,7 +48,7 @@ function Auth() {
             type="email" 
             required 
             aria-label="User email" />
-            <label>User Name</label>
+            <label>User Email</label>
           </div>
           <div className="input-box">
             <input 

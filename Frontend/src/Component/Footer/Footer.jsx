@@ -37,7 +37,7 @@ const Footer = () => {
           <p>Ambika Jewellers - Celebrating the art of fine craftsmanship since 2015. Discover timeless elegance and unmatched quality with every piece.<br/>
           'Jewelry is not just an accessory, it's a reflection of your unique story.'</p>
           <div className="social-icons">
-            <a href="#"><i className="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/people/Chandan-Pal/pfbid0pCyC9eUWFbS1zE8D7UJWE34yefwJRYzB1GUoJTDekjFmRfUMVTaUBAEU2z2VAYHPl/?rdid=1MmkkQZrZo4SqLdC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EwK8gDJ9m%2F"><i className="fa-brands fa-facebook"></i></a>
             <a href="#"><i className="fa-brands fa-square-x-twitter"></i></a>
             <a href="#"><i className="fa-brands fa-instagram"></i></a>
             <a href="#"><i className="fa-brands fa-linkedin"></i></a>
@@ -55,8 +55,8 @@ const Footer = () => {
         <div className="contact-info">
           <h2>Contact Info</h2>
           <ul>
-            <li><a href="tel:+91xx">+91 xxxx</a></li>
-            <li><a href="mailto:sandipanpal254@gmail.com">xyz@gmail.com</a></li>
+            <li><a href="tel:+919002061462">+919002061462</a></li>
+            <li><a href="mailto:palchandan834@gmail.com">palchandan834@gmail.com</a></li>
             <li>Jahalda @ Belda @ Paschim Medinipur</li>
           </ul>
         </div>
