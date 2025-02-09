@@ -27,10 +27,12 @@ function AddCard() {
     formData.append('pricing', pricing);
     formData.append('image', image); 
 
+    // .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
+    //   headers: { 'Content-Type': 'multipart/form-data' },
+    // })
+
     axios
-    .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    })
+    .post('https://ambhika-jwellers.onrender.com/cards/create', formData)
     .then(() => {
       enqueueSnackbar('Card Created successfully', { variant: 'success' });
       navigate('/');
