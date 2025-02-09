@@ -96,7 +96,7 @@ function AddCard() {
           className="addCardSubmit"
           >Submit</button>
         </form>
-    </div>
+      </div>
     </div>
   )
 }
