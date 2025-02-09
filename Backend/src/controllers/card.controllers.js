@@ -3,9 +3,10 @@ import { v2 as cloudinary } from "cloudinary"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import dotenv from "dotenv";
 
-dotenv.config({
-    path: '..../.env'
-})
+// dotenv.config({
+//     path: '..../.env'
+// })
+dotenv.config();
 
 cloudinary.config({ 
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
