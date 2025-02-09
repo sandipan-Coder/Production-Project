@@ -3,7 +3,7 @@ import fs from "fs"    // This is use for file system
 import dotenv from "dotenv";
 
 dotenv.config({
-    path: './.env'
+    path: '../.env'
 })
 
 

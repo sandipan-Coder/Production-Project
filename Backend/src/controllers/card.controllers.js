@@ -4,7 +4,7 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import dotenv from "dotenv";
 
 dotenv.config({
-    path: './.env'
+    path: '../.env'
 })
 
 cloudinary.config({ 
