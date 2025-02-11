@@ -28,7 +28,7 @@ const authentication = async(req, res, ) => {
         })
     }
 
-    if((email == "chandan@gmail.com") || (password == 12345)){
+    if((email === "chandan@gmail.com") || (password === 12345)){
         return res.status(200).json({
             status: "success",
             message: "User is authenticated"

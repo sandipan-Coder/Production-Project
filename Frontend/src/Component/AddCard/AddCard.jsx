@@ -32,7 +32,9 @@ function AddCard() {
     // })
 
     axios
-    .post('https://ambhika-jwellers.onrender.com/cards/create', formData)
+    .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    })
     .then(() => {
       enqueueSnackbar('Card Created successfully', { variant: 'success' });
       navigate('/');

@@ -19,8 +19,7 @@ const uploadOnCloudinary = async (localFilePath) => {
             return null;
         }
         // Upload the file on cloudinary
-        // cloudinary.uploader.upload
-        const response = await cloudinary.uploader(localFilePath, {
+        const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "image",
         })
         // File has been  uploaded successfully
