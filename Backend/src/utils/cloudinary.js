@@ -2,6 +2,7 @@ import { v2 as cloudinary } from "cloudinary"
 import fs from "fs"    // This is use for file system
 import dotenv from "dotenv";
 
+
 dotenv.config();
 
 
@@ -18,7 +19,8 @@ const uploadOnCloudinary = async (localFilePath) => {
             return null;
         }
         // Upload the file on cloudinary
-        const response = await cloudinary.uploader.upload(localFilePath, {
+        // cloudinary.uploader.upload
+        const response = await cloudinary.uploader(localFilePath, {
             resource_type: "image",
         })
         // File has been  uploaded successfully
