@@ -27,10 +27,6 @@ function AddCard() {
     formData.append('pricing', pricing);
     formData.append('image', image); 
 
-    // .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
-    //   headers: { 'Content-Type': 'multipart/form-data' },
-    // })
-
     axios
     .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },

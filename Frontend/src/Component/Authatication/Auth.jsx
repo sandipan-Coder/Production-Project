@@ -29,7 +29,7 @@ function Auth() {
       navigate('/cards/create');
     })
     .catch((error) => {
-      enqueueSnackbar('Error', { variant: 'error'});
+      enqueueSnackbar('Enter valid information', { variant: 'error'});
       navigate('/');
       console.log(error)
     });
