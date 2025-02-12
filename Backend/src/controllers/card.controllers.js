@@ -53,7 +53,8 @@ const createCard = async (req, res) => {
                 message: "Please provide all the fields"
             })
         }
-        const image = req.files?.image[0]?.path;
+        // const image = req.files?.image[0]?.path;
+        const image = req.files?.path;
 
         if (!image) {
             return res.status(400).json({
