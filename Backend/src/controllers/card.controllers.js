@@ -3,9 +3,6 @@ import { v2 as cloudinary } from "cloudinary"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import dotenv from "dotenv";
 
-// dotenv.config({
-//     path: '..../.env'
-// })
 dotenv.config();
 
 cloudinary.config({ 
@@ -45,7 +42,6 @@ const authentication = async(req, res, ) => {
 const createCard = async (req, res) => {
     try {
         const { name, description, pricing } = req.body;
-       
         
         if ([name, description, pricing].some((field) => field?.trim() === "")) {
             return res.status(400).json({
@@ -53,8 +49,7 @@ const createCard = async (req, res) => {
                 message: "Please provide all the fields"
             })
         }
-        // const image = req.files?.image[0]?.path;
-        const image = req.files?.path;
+        const image = req.files?.image[0]?.path;
 
         if (!image) {
             return res.status(400).json({
@@ -114,7 +109,6 @@ const deleteCard = async (req, res) => {
         const UrlArray = cardimg.split('/');
         const lastLocation =  UrlArray[UrlArray.length - 1];
         const public_id = lastLocation.split('.')[0];
-        console.log(public_id)
         cloudinary.uploader.destroy(public_id, (error, result) => {
             console.log(error, result);
         })
@@ -130,7 +124,6 @@ const deleteCard = async (req, res) => {
         })
     }
 }
-
 
 // Get all cards
 const getAllCards = async (req, res) => {

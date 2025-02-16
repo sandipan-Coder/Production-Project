@@ -6,17 +6,13 @@ const router = Router();
 
 router.route("/").get(getAllCards);
 router.route("/auth").post(authentication);
-// router.route("/create").post(
-//     upload.fields([
-//         {
-//             name:  "image",
-//             maxCount: 1
-//         },
-//     ]),
-//     createCard
-// );
 router.route("/create").post(
-    upload.single('image'), 
+    upload.fields([
+        {
+            name:  "image",
+            maxCount: 1
+        },
+    ]),
     createCard
 );
 router.route("/:id").delete(deleteCard);

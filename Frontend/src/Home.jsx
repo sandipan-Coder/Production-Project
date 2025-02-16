@@ -26,16 +26,16 @@ export default function Home() {
     const handleDelete = (id) => {
         
         axios
-        .delete(`https://ambhika-jwellers.onrender.com/cards/${id}`)
-        .then(() => {
-    
-            setCards((prevBooks) => prevBooks.filter((cards) => cards._id !== id));
-            enqueueSnackbar("Card deleted successfully!", { variant: "success" });
-        })
-        .catch((error) => {
-            enqueueSnackbar("Error", { variant: "error" });
-            console.log("Error deleting card:", error);
-        });      
+            .delete(`https://ambhika-jwellers.onrender.com/cards/${id}`)
+            .then(() => {
+        
+                setCards((prevBooks) => prevBooks.filter((cards) => cards._id !== id));
+                enqueueSnackbar("Card deleted successfully!", { variant: "success" });
+            })
+            .catch((error) => {
+                enqueueSnackbar("Error", { variant: "error" });
+                console.log("Error deleting card:", error);
+            });      
        
     };
 

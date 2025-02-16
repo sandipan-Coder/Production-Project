@@ -21,18 +21,17 @@ function Auth() {
     }
 
     const data = {email, password};
-
     axios
-    .post('https://ambhika-jwellers.onrender.com/cards/auth', data)
-    .then(() => {
-      enqueueSnackbar('Authenticated successfully', { variant: 'success' });
-      navigate('/cards/create');
-    })
-    .catch((error) => {
-      enqueueSnackbar('Enter valid information', { variant: 'error'});
-      navigate('/');
-      console.log(error)
-    });
+      .post('https://ambhika-jwellers.onrender.com/cards/auth', data)
+      .then(() => {
+        enqueueSnackbar('Authenticated successfully', { variant: 'success' });
+        navigate('/cards/create');
+      })
+      .catch((error) => {
+        enqueueSnackbar('Enter valid information', { variant: 'error'});
+        navigate('/');
+        console.log(error)
+      });
 
   };
 

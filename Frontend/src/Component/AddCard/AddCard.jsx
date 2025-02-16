@@ -28,18 +28,18 @@ function AddCard() {
     formData.append('image', image); 
 
     axios
-    .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    })
-    .then(() => {
-      enqueueSnackbar('Card Created successfully', { variant: 'success' });
-      navigate('/');
-    })
-    .catch((error) => {
-      enqueueSnackbar('Error', { variant: 'error'});
-      navigate('/');
-      console.log(error)
-    });
+      .post('https://ambhika-jwellers.onrender.com/cards/create', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+      .then(() => {
+        enqueueSnackbar('Card Created successfully', { variant: 'success' });
+        navigate('/');
+      })
+      .catch((error) => {
+        enqueueSnackbar('Error', { variant: 'error'});
+        navigate('/');
+        console.log(error)
+      });
   }
 
   const handleFileChange = (e) => {

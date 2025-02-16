@@ -4,7 +4,6 @@ import path from "path";
 import cardRouter from "./routes/card.routes.js";
 
 const app = express();
-
 app.use(
   cors({
     origin: "https://ambhika-jwellers.onrender.com",
