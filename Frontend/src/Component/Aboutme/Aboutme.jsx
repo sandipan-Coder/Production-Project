@@ -21,13 +21,15 @@ const AboutMe = () => {
           <section className="about-story">
             <h2>Our Story</h2>
             <p>
-            In the quaint town of Jahalda, Belda, Paschim Medinipur, there’s a name that has been synonymous with quality and trust since 2015—Ambika Jewellers. Owned by Chandan Pal, this family-run jewelry store has become a beloved destination for those seeking timeless beauty and impeccable craftsmanship.<br/>
+            অম্বিকা জুয়েলার্স: বিশ্বাস ও গুণগত মানের এক পরিচিত নাম <br />
 
-            What began as a humble endeavor has grown into a beacon of artistry and reliability. At Ambika Jewellers, gold and silver ornaments are not just created; they’re crafted with precision and care, reflecting the dreams and emotions of every customer. From exquisite new designs to the careful repair of cherished heirlooms, every piece tells a story of elegance and heritage.<br/>
-            <br/>
-            Stepping into the beautifully decorated air-conditioned showroom, customers are greeted with a warm ambiance and a promise of premium quality. It’s not just the shimmering ornaments that draw people in—it’s the unwavering commitment to trust and excellence that keeps them coming back.<br/>
+            ২০১৫ সালে চন্দন পালের হাতে প্রতিষ্ঠিত অম্বিকা জুয়েলার্স, আজও তার গুণগত মান ও বিশ্বাসের জন্য সুপরিচিত। পশ্চিম মেদিনীপুরের জাহালদা, বেলদায় অবস্থিত এই গহনার দোকান শুধু সোনার ও রুপার অলংকার তৈরি করেই থেমে থাকেনি, পুরনো গয়না মেরামতের ক্ষেত্রেও করেছে এক নতুন দৃষ্টান্ত স্থাপন।<br />
 
-            For nearly a decade, Ambika Jewellers has stood as a testament to Chandan Pal’s vision: creating jewelry that lasts a lifetime and building relationships rooted in integrity.
+            অম্বিকা জুয়েলার্সে প্রবেশ করলেই অনুভব করা যায় এক অনন্য পরিবেশ—সুন্দরভাবে সাজানো শোরুম, শীতাতপ নিয়ন্ত্রিত আরামদায়ক ঘর এবং সর্বোপরি, নিখুঁত কারিগরির অলংকার। এখানে প্রতিটি গয়না শুধু ধাতু নয়, বরং স্বপ্ন আর আবেগের এক অপূর্ব মিশ্রণ।<br />
+
+            প্রতিষ্ঠার পর থেকেই "গুণগত মান ও বিশ্বাস" আমাদের প্রধান লক্ষ্য। আমাদের প্রতিটি সৃষ্টির পেছনে রয়েছে ভালোবাসা ও যত্ন, যা আমাদের ক্রেতাদের মুখে হাসি ফোটায়।<br />
+
+            অম্বিকা জুয়েলার্স—এখানে গয়নার শুধু দাম নেই, আছে অনুভূতি! <br />
             </p>
           </section>
           <section className="about-values">
